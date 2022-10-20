@@ -2,6 +2,9 @@
 <p> Download 20 emotes from 7TV in desired format at once!. <p>
 <hr> 
 
+<a href="https://a-7tv-grabber.herokuapp.com/">Link to website</a>
+Note: it's hosted on Heroku for free so it might be a little slow 
+
 <h3>How to use</h3>
  <ol type="1">
   <li>Copy the 7TV URL like in the input field (<strong>NOT the CDN link!</strong>)</li>
