@@ -1,7 +1,8 @@
-import AddEmoteForm from "./AddEmoteForm";
-import EmoteList from "./EmoteList";
-import DownloadButton from "./DownloadButton";
-import LandingPageHeader from "./LandingPageHeader";
+import AddEmoteForm from "./LandingPage/AddEmoteForm";
+import EmoteList from "./LandingPage/EmoteList";
+import DownloadButton from "./LandingPage/DownloadButton";
+import LandingPageHeader from "./LandingPage/LandingPageHeader";
+import Disclaimer from "./LandingPage/Disclaimer";
 import JSZip from "jszip";
 import { saveAs } from 'file-saver';
 
@@ -49,6 +50,7 @@ function LandingPage() {
                     <AddEmoteForm AddToEmoteArray={AddToEmoteArray} />
                     <EmoteList emoteArray={emoteArray} />
                     <DownloadButton DownloadEmotes={DownloadEmotes} />
+                    <Disclaimer />
                 </div>
             </div>
         </div>
