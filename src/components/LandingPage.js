@@ -4,14 +4,11 @@ import DownloadButton from "./LandingPage/DownloadButton";
 import LandingPageHeader from "./LandingPage/LandingPageHeader";
 import Disclaimer from "./LandingPage/Disclaimer";
 import JSZip from "jszip";
-
 import { saveAs } from 'file-saver';
 import { useState } from 'react';
 
 function LandingPage() {
-
     const [emoteArray, setEmoteArray] = useState([]);
-    const [totalDownloaded, setTotalDownloaded] = useState(0);
 
     const AddToEmoteArray = (url) => {
         if (emoteArray.length >= 20) {
@@ -20,7 +17,7 @@ function LandingPage() {
         setEmoteArray(emotes => [...emotes, url]);
     }
 
-    const DownloadEmotes = () => {
+    async function DownloadEmotes(){
         if (emoteArray.length === 0) {
             return alert("You need to add at least one emote to download");
         }
@@ -34,13 +31,12 @@ function LandingPage() {
             }
         );
 
-        zip.generateAsync({ type: "blob" })
+        await zip.generateAsync({ type: "blob" })
             .then(function (content) {
                 saveAs(content, "emotes_" + Date.now() + ".zip");
             }
         );
-        
-        setTotalDownloaded(totalDownloaded + emoteArray.length);
+
         setEmoteArray([]);
     }
 
@@ -53,7 +49,6 @@ function LandingPage() {
                     <EmoteList emoteArray={emoteArray} />
                     <DownloadButton DownloadEmotes={DownloadEmotes} />
                     <Disclaimer />
-                    <p className="text-sm text-stone-300 mt-3 mb-0">Total emotes downloaded: <span className="text-violet-500">{totalDownloaded}</span> </p>
                 </div>
             </div>
         </div>
