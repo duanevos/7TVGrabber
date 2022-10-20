@@ -26,9 +26,9 @@ function LandingPage() {
 
         const zip = new JSZip();
         emoteArray.forEach((emote, index) => {
-            zip.file((index + 1) + ".png", 
+            zip.file((index + 1) + emote.substring(emote.lastIndexOf(".")), 
                 fetch(emote)
-                .then(res => res.blob())
+                    .then(res => res.blob())
                 );
             }
         );
