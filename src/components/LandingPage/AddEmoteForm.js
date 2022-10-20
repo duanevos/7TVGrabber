@@ -16,7 +16,6 @@ const AddEmoteForm = ({AddToEmoteArray}) => {
             );
             return setUrl("");
         }
-        //TO DO?: Style error message??
         alert("Invalid URL");
     };
 
