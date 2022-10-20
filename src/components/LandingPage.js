@@ -4,8 +4,8 @@ import DownloadButton from "./LandingPage/DownloadButton";
 import LandingPageHeader from "./LandingPage/LandingPageHeader";
 import Disclaimer from "./LandingPage/Disclaimer";
 import JSZip from "jszip";
-import { saveAs } from 'file-saver';
 
+import { saveAs } from 'file-saver';
 import { useState } from 'react';
 
 function LandingPage() {
