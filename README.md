@@ -13,6 +13,6 @@
 <hr>
 
 <h1>Disclaimer</h1>
-7TVGrabber isn't endorsed by 7TV.
+7TVGrabber is not affiliated with 7TV. All emotes are property of their respective owners.
 
 
