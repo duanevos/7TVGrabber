@@ -11,6 +11,7 @@ import { useState } from 'react';
 function LandingPage() {
 
     const [emoteArray, setEmoteArray] = useState([]);
+    const [totalDownloaded, setTotalDownloaded] = useState(0);
 
     const AddToEmoteArray = (url) => {
         if (emoteArray.length >= 20) {
@@ -38,7 +39,8 @@ function LandingPage() {
                 saveAs(content, "emotes_" + Date.now() + ".zip");
             }
         );
-
+        
+        setTotalDownloaded(totalDownloaded + emoteArray.length);
         setEmoteArray([]);
     }
 
@@ -51,6 +53,7 @@ function LandingPage() {
                     <EmoteList emoteArray={emoteArray} />
                     <DownloadButton DownloadEmotes={DownloadEmotes} />
                     <Disclaimer />
+                    <p className="text-sm text-stone-300 mt-3 mb-0">Total emotes downloaded: <span className="text-violet-500">{totalDownloaded}</span> </p>
                 </div>
             </div>
         </div>
