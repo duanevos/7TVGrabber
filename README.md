@@ -15,6 +15,8 @@ Note: it's hosted on Heroku for free so it might be a little slow
 </ol> 
 <hr>
 
+<img style="width: 400px; height: auto;" src="https://cdn.upload.systems/uploads/KPpSkG15.png"/>
+
 <h1>Disclaimer</h1>
 7TVGrabber is not affiliated with 7TV. All emotes are property of their respective owners.
 
