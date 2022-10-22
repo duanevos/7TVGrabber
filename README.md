@@ -1,5 +1,5 @@
 <h1> 7TV Grabber </h1>
-<p> Download 20 emotes from 7TV in desired format at once!. <p>
+<p> Download up to 20 emotes from 7TV in desired format at once. <p>
 <hr> 
 
 <a href="https://a-7tv-grabber.herokuapp.com/">Link to website</a>
